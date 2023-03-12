@@ -1,0 +1,18 @@
+footer {
+  background-color: var(--dark-500);
+  height: 128px;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    li {
+      margin-right: 45px;
+      a {
+        color: var(--light);
+        font-size: 11px;
+        font-weight: 300;
+      }
+    }
+  }
+}

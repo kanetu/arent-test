@@ -1,0 +1,29 @@
+.food-menu {
+  position: relative;
+
+  &__background {
+    position: absolute;
+    z-index: -1;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 116px;
+    height: 134px;
+
+    span {
+      font-family: "Inter", sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--light);
+    }
+  }
+  .content {
+    &__icon {
+      width: 56px;
+      height: 56px;
+    }
+  }
+}

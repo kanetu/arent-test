@@ -1,0 +1,15 @@
+.view-more-button {
+  min-width: 296px;
+  min-height: 56px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  color: var(--light);
+  background: linear-gradient(
+    32.95deg,
+    var(--primary-300) 8.75%,
+    var(--primary-400) 86.64%
+  );
+}
