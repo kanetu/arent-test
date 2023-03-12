@@ -2,9 +2,11 @@
   position: relative;
   height: 234px;
   width: 234px;
+  margin: 4px;
   img {
     width: 234px;
     height: 234px;
+    object-fit: cover;
   }
 
   span {

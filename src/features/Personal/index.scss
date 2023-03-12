@@ -1,0 +1,48 @@
+.personal-info {
+  .choose-food-menu {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 24px 180px;
+  }
+
+  .intro {
+    display: flex;
+    .achievement-rate {
+      flex-basis: 40%;
+      position: relative;
+      img {
+        width: 540px;
+        height: 316px;
+        object-fit: cover;
+      }
+      .progress-circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .line-chart-wrapper {
+      background-color: var(--dark-600);
+      flex-basis: 60%;
+      height: 316px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .list-dishes {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    margin: 0 152px;
+  }
+
+  .view-more-section {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

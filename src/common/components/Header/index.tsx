@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         <nav>
           <ul>
             <li>
-              <a href="/profile">
+              <a href="/personal-info">
                 <img src="icons/info-count.svg" alt="icon-profile" />
                 <span>自分の記録</span>
               </a>
