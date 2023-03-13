@@ -3,6 +3,7 @@ import CircleProgressBar from "../../common/components/CircleProgressBar";
 import FoodCard from "../../common/components/FoodCard";
 import FoodMenu from "../../common/components/FoodMenu";
 import LineChart from "../../common/components/LineChart";
+import ScrollToTopButton from "../../common/components/ScrollToTopButton";
 import ViewMoreButton from "../../common/components/ViewMoreButton";
 
 interface IPersonalInfo {}
@@ -73,15 +74,56 @@ const PersonalInfo: React.FC<IPersonalInfo> = () => {
       imageUrl: "images/m02.jpg",
     },
   ];
+
+  const mockData = [
+    {
+      id: 1,
+      data: [
+        { month: 6, inCharge: 3 },
+        { month: 7, inCharge: 2 },
+        { month: 8, inCharge: 1 },
+        { month: 9, inCharge: 3 },
+        { month: 10, inCharge: 0 },
+        { month: 11, inCharge: 4 },
+        { month: 12, inCharge: 6 },
+      ],
+      strokeColor: "#8FE9D0",
+    },
+    {
+      id: 2,
+      data: [
+        { month: 6, inCharge: 0 },
+        { month: 7, inCharge: 3 },
+        { month: 8, inCharge: 2 },
+        { month: 9, inCharge: 4 },
+        { month: 10, inCharge: 3 },
+        { month: 11, inCharge: 5 },
+        { month: 12, inCharge: 0 },
+      ],
+      strokeColor: "#FFCC21",
+    },
+  ];
+
+  const lineChartConfig = {
+    height: 300,
+    width: 500,
+    margin: { top: 20, bottom: 20, left: 20, right: 20 },
+  };
   return (
     <div className="personal-info">
+      <ScrollToTopButton />
       <div className="intro">
         <div className="achievement-rate">
           <CircleProgressBar percent={80} />
           <img src="images/d01.jpg" alt="achievement-image" />
         </div>
         <div className="line-chart-wrapper">
-          <LineChart />
+          <LineChart
+            mockData={mockData}
+            width={lineChartConfig.width}
+            height={lineChartConfig.height}
+            margin={lineChartConfig.margin}
+          />
         </div>
       </div>
 

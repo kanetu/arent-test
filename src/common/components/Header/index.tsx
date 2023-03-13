@@ -1,10 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const Header: React.FC = () => {
+interface IHeader {}
+const Header: React.FC<IHeader> = () => {
+  const navigate = useNavigate();
+
+  const handleClickLogo = () => {
+    navigate("/");
+  };
   return (
     <div className="header">
       <div className="left-side">
-        <img id="logo" src="logo.svg" alt="logo" />
+        <img id="logo" src="logo.svg" alt="logo" onClick={handleClickLogo} />
       </div>
       <div className="right-side">
         <nav>

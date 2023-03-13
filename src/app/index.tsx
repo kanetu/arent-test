@@ -4,7 +4,6 @@ import {
   Navigate,
   Outlet,
   Route,
-  RouteProps,
   Routes,
 } from "react-router-dom";
 import Footer from "../common/components/Footer";
@@ -17,17 +16,18 @@ import "./index.scss";
 const App: React.FC = () => {
   return (
     <div className="main">
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/" element={<AuthRoute />}>
             <Route path="/personal-info" element={<PersonalInfo />} />
           </Route>
           <Route path="/login" element={<Login />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   );
 };
